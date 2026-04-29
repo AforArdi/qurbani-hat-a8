@@ -1,6 +1,6 @@
 const AllAnimalsPage = () => {
     return ( 
-        <div>
+        <div className="max-w-6xl mx-auto">
             All Animals Page
         </div>
      );
