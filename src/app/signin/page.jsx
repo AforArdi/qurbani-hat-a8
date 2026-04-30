@@ -21,7 +21,7 @@ const SignInPage = () => {
             email, // required
             callbackURL: '/'
         });
-        console.log(error);
+        // console.log(error);
 
         if (res) {
             toast.success('Login Successful');
