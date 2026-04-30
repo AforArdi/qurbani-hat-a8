@@ -31,7 +31,7 @@ const SignUpPage = () => {
             router.push('/');
         }
         if (error) {
-            toast.error(error.message);
+            toast.error(`${error.message}`);
         }
     }
     return (
