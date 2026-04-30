@@ -7,7 +7,7 @@ const HomePage = async () => {
     return ( 
         <div className="max-w-6xl mx-auto my-5">
             <h2 className="text-3xl text-[#154734] text-center my-4">Featured</h2>
-            <div>
+            <div className="flex flex-wrap items-center gap-4 justify-center">
                 {
                     animals.slice(0,4).map(animal=>
                         <AnimalCard key={animal.id} animal={animal}></AnimalCard>

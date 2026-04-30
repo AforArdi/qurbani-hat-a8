@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "name": "Khulna Black Bull",
+    "name": "Black Bull",
     "type": "Cow",
     "breed": "Friesian Cross",
     "price": 185000,
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "name": "Rajshahi Red Cow",
+    "name": "Red Cow",
     "type": "Cow",
     "breed": "Sahiwal Cross",
     "price": 150000,
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "name": "Natore Premium Goat",
+    "name": "Premium Goat",
     "type": "Goat",
     "breed": "Black Bengal",
     "price": 25000,
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "name": "Noakhali White Goat",
+    "name": "White Goat",
     "type": "Goat",
     "breed": "Jamunapari Cross",
     "price": 32000,
@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "name": "Cumilla Brown Goat",
+    "name": "Brown Goat",
     "type": "Goat",
     "breed": "Black Bengal",
     "price": 22000,
@@ -79,7 +79,7 @@
   },
   {
     "id": 7,
-    "name": "Faridpur Sheep",
+    "name": "Sheep",
     "type": "Sheep",
     "breed": "Garole",
     "price": 27000,
@@ -92,7 +92,7 @@
   },
   {
     "id": 8,
-    "name": "Jamalpur Heavy Sheep",
+    "name": "Heavy Sheep",
     "type": "Sheep",
     "breed": "Cross Breed",
     "price": 30000,
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "name": "Dhaka Premium Bull",
+    "name": "Premium Bull",
     "type": "Cow",
     "breed": "Sindhi Cross",
     "price": 210000,
