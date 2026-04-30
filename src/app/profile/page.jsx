@@ -3,6 +3,7 @@ import { Avatar, Card } from "@heroui/react";
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
 import userAvatar from '@/assets/userAvatarDefault.png'
+import ProfileUpdateModal from "@/components/profile/ProfileUpdateModal";
 
 const ProfilePage = () => {
     const { data: session, isPending } = authClient.useSession();
@@ -34,7 +35,7 @@ const ProfilePage = () => {
                             <Card.Description>{user?.email}</Card.Description>
                         </Card.Header>
                         <Card.Footer className="flex gap-2">
-                            modal
+                            <ProfileUpdateModal></ProfileUpdateModal>
                         </Card.Footer>
                     </div>
                 </Card>}
