@@ -6,16 +6,24 @@ import defaultPic from '@/assets/qurbaniAnimalsDefaultPic.png'
 import { FaLocationDot } from "react-icons/fa6";
 import { TbCoinTaka } from "react-icons/tb";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Chip } from '@heroui/react';
+import {ChevronDown, CircleCheckFill, CircleFill, Clock, Xmark} from "@gravity-ui/icons";
 
 
 const AnimalCard = ({ animal }) => {
-    
+
     return (
         <div>
-            <Card className="">
-                <Image src={animal?.image || defaultPic} alt={animal?.name} width={300} height={300}
-                className="rounded-lg mx-auto"
-                ></Image>
+            <Card>
+                <div className="relative">
+                    <Image src={animal?.image || defaultPic} alt={animal?.name} width={300} height={300}
+                        className="rounded-lg mx-auto"
+                    ></Image>
+                    <Chip className="absolute top-2 right-6">
+                        <CircleFill width={6} />
+                        <Chip.Label>{animal.breed}</Chip.Label>
+                    </Chip>
+                </div>
                 <Card.Header className="space-y-2">
                     <Card.Title className="font-semibold text-2xl">
                         {animal.name}
