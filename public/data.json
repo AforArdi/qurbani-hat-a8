@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Deshi Shahi Cow",
     "type": "Cow",
     "breed": "Local Deshi",
@@ -13,7 +13,7 @@
     "category": "Large Animal"
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Black Bull",
     "type": "Cow",
     "breed": "Friesian Cross",
@@ -26,7 +26,7 @@
     "category": "Large Animal"
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Red Cow",
     "type": "Cow",
     "breed": "Sahiwal Cross",
@@ -39,7 +39,7 @@
     "category": "Large Animal"
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Premium Goat",
     "type": "Goat",
     "breed": "Black Bengal",
@@ -52,7 +52,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 5,
+    "id": "5",
     "name": "White Goat",
     "type": "Goat",
     "breed": "Jamunapari Cross",
@@ -65,7 +65,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 6,
+    "id": "6",
     "name": "Brown Goat",
     "type": "Goat",
     "breed": "Black Bengal",
@@ -78,7 +78,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 7,
+    "id": "7",
     "name": "Sheep",
     "type": "Sheep",
     "breed": "Garole",
@@ -91,7 +91,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 8,
+    "id": "8",
     "name": "Heavy Sheep",
     "type": "Sheep",
     "breed": "Cross Breed",
@@ -104,7 +104,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 9,
+    "id": "9",
     "name": "Premium Bull",
     "type": "Cow",
     "breed": "Sindhi Cross",
