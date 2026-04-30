@@ -7,14 +7,19 @@ import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { toast } from "react-toastify";
+import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
-    const { data: session } = authClient.useSession()
+    const router = useRouter();
+
+    const { data: session } = authClient.useSession();
     const user = session?.user;
-    console.log(user);
+    // console.log(user);
+
     const handleSignoutBtn= async ()=>{
         await authClient.signOut();
         toast.warning("You've been signed out")
+        router.push('/');
     }
 
     return (
@@ -32,13 +37,20 @@ const Navbar = () => {
                         <li><NavLink href="/animals">All Animals</NavLink></li>
                     </ul>
                     {user ? <div className="flex items-center gap-2">
+                        <h2>{user.name}</h2>
                         <Avatar>
                             <Avatar.Image alt={user.name} src={user.image} />
                             <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
                         </Avatar>
+                        {/* profile btn */}
+                        <Link href={'/profile'}>
+                            <button
+                            className="btn btn-neutral text-white rounded-3xl">Profile</button>
+                        </Link>
+                        {/* signout btn */}
                         <button
                         onClick={handleSignoutBtn}
-                        className="btn bg-[#154734] text-white rounded-3xl">Sign out</button>
+                        className="btn bg-red-500 text-white rounded-3xl">Sign out</button>
                     </div> :
                         <div className="flex items-center gap-2">
                             <Link href={'/signin'}>
