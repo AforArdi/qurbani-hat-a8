@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { TbCoinTaka } from "react-icons/tb";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Chip } from '@heroui/react';
-import {ChevronDown, CircleCheckFill, CircleFill, Clock, Xmark} from "@gravity-ui/icons";
+import { CircleFill } from "@gravity-ui/icons";
 
 
 const AnimalCard = ({ animal }) => {
@@ -32,6 +32,9 @@ const AnimalCard = ({ animal }) => {
                         <span className="flex items-center text-xl">Price: <TbCoinTaka></TbCoinTaka>{animal.price}</span>
                         <span className="flex items-center text-xl"><FaLocationDot size={15}></FaLocationDot> {animal.location}</span>
                     </Card.Description>
+                    <div>
+
+                    </div>
                 </Card.Header>
                 <Card.Footer className="w-full">
                     <Link href={`/animals/${animal.id}`}>
