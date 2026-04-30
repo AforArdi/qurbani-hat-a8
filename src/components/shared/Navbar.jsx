@@ -7,10 +7,10 @@ import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { toast } from "react-toastify";
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 
 const Navbar = () => {
-    const router = useRouter();
+    // const router = useRouter();
 
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
@@ -19,7 +19,7 @@ const Navbar = () => {
     const handleSignoutBtn= async ()=>{
         await authClient.signOut();
         toast.warning("You've been signed out")
-        router.push('/signin');
+        redirect('/signin');
     }
 
     return (
