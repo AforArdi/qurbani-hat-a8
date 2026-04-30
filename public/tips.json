@@ -1,0 +1,38 @@
+{
+  "dos": [
+    {
+      "id": 1,
+      "text": "Choose healthy and active animals"
+    },
+    {
+      "id": 2,
+      "text": "Book your animal early"
+    },
+    {
+      "id": 3,
+      "text": "Verify seller authenticity"
+    },
+    {
+      "id": 4,
+      "text": "Check weight and age properly"
+    }
+  ],
+  "donts": [
+    {
+      "id": 5,
+      "text": "Do not buy sick or weak animals"
+    },
+    {
+      "id": 6,
+      "text": "Avoid last-minute booking rush"
+    },
+    {
+      "id": 7,
+      "text": "Do not trust unverified sellers"
+    },
+    {
+      "id": 8,
+      "text": "Avoid unsafe payment methods"
+    }
+  ]
+}
