@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
+import { Flip, ToastContainer } from "react-toastify";
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -23,6 +24,19 @@ export default function RootLayout({ children }) {
       <body className='min-h-full flex flex-col'>
         <Navbar></Navbar>
         <main>{children}</main>
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition={Flip}
+        />
       </body>
     </html>
   );
