@@ -12,14 +12,14 @@ import { useRouter } from 'next/navigation'
 const Navbar = () => {
     const router = useRouter();
 
-    const { data: session } = authClient.useSession();
+    const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
     console.log(user);
 
     const handleSignoutBtn= async ()=>{
         await authClient.signOut();
         toast.warning("You've been signed out")
-        router.push('/');
+        router.push('/signin');
     }
 
     return (
@@ -36,7 +36,7 @@ const Navbar = () => {
                         <li><NavLink href="/">Home</NavLink></li>
                         <li><NavLink href="/animals">All Animals</NavLink></li>
                     </ul>
-                    {user ? <div className="flex items-center gap-2">
+                    {isPending ? <span className="loading loading-ring loading-xl"></span> : user ? <div className="flex items-center gap-2">
                         <h2>{user.name}</h2>
                         <Avatar>
                             <Avatar.Image alt={user.name} src={user.image} />

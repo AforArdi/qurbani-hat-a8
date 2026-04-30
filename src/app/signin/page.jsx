@@ -45,7 +45,7 @@ const SignInPage = () => {
 
                 <label className="label">Password</label>
                 <input type="password"
-                {...register("password", { required: 'Password is required' })}
+                {...register("password", { required: 'Password is required', minLength: 8 })}
                 className="input" placeholder="Password" />
                 {errors.password && <span>{errors.password.message}</span>}
 
