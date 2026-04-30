@@ -55,14 +55,14 @@ const SignUpPage = () => {
 
                 <label className="label">Password</label>
                 <input type="password"
-                {...register("password", { required: 'Password is required', minLength: 8 })}
+                {...register("password", { required: 'Password is required', minLength: {value: 8, message: 'Minimum Length is 8'} })}
                 className="input" placeholder="Password" />
                 {errors.password && <span>{errors.password.message}</span>}
 
-                <label className="label">Photo URL</label>
-                <input type="text"
+                <label className="label">Photo URL (optional)</label>
+                <input type="url"
                 {...register("photo")}
-                className="input" placeholder="Photo url" />
+                className="input" placeholder="valid url or leave empty" />
 
                 <button className="btn bg-[#154734] text-white rounded-3xl mt-4">Sign up</button>
                 <p className="text-[14px]">Already have an account? <Link href={'/signin'} className="text-[#154734]">Sign in</Link></p>

@@ -1,5 +1,5 @@
 'use client'
-import { Card, Separator } from "@heroui/react";
+import { Card } from "@heroui/react";
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
 import userAvatar from '@/assets/userAvatarDefault.png'
