@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Dhaka",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
-    "image": "",
+    "image": "https://i.postimg.cc/JhXjtQRV/1.png",
     "category": "Large Animal"
   },
   {
@@ -22,7 +22,7 @@
     "age": 4,
     "location": "Khulna",
     "description": "Strong and বড় সাইজের bull. ভালোভাবে পালন করা হয়েছে with premium feed.",
-    "image": "",
+    "image": "https://i.postimg.cc/pL4D2Sbf/2.png",
     "category": "Large Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 3.5,
     "location": "Rajshahi",
     "description": "Red colored healthy cow, calm nature, perfect for family Qurbani.",
-    "image": "",
+    "image": "https://i.postimg.cc/wvdLNsBp/3.png",
     "category": "Large Animal"
   },
   {
@@ -48,7 +48,7 @@
     "age": 1.5,
     "location": "Natore",
     "description": "Black Bengal goat, highly demanded for Qurbani. Healthy and active.",
-    "image": "",
+    "image": "https://i.postimg.cc/Y9wYFmS7/4.png",
     "category": "Small Animal"
   },
   {
@@ -61,7 +61,7 @@
     "age": 2,
     "location": "Noakhali",
     "description": "Tall and সুন্দর white goat, ভালো ওজন এবং সুস্থ.",
-    "image": "",
+    "image": "https://i.postimg.cc/V6cntbNN/5.png",
     "category": "Small Animal"
   },
   {
@@ -74,7 +74,7 @@
     "age": 1.2,
     "location": "Cumilla",
     "description": "Small but healthy goat, budget-friendly Qurbani option.",
-    "image": "",
+    "image": "https://i.postimg.cc/yxLZ2QyC/6.png",
     "category": "Small Animal"
   },
   {
@@ -87,7 +87,7 @@
     "age": 2,
     "location": "Faridpur",
     "description": "Soft wool sheep, well-maintained and suitable for Qurbani.",
-    "image": "",
+    "image": "https://i.postimg.cc/1XmFChwx/7.png",
     "category": "Small Animal"
   },
   {
@@ -100,7 +100,7 @@
     "age": 2.5,
     "location": "Jamalpur",
     "description": "Heavy वजन sheep with ভালো স্বাস্থ্য condition.",
-    "image": "",
+    "image": "https://i.postimg.cc/VvftGQnm/8.png",
     "category": "Small Animal"
   },
   {
@@ -113,7 +113,7 @@
     "age": 5,
     "location": "Dhaka",
     "description": "Premium বড় bull, ideal for group Qurbani. Properly vaccinated and cared.",
-    "image": "",
+    "image": "https://i.postimg.cc/8cpvKQMD/9.png",
     "category": "Large Animal"
   }
 ]
