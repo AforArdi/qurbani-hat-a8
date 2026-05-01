@@ -19,7 +19,7 @@ const ProfilePage = () => {
                         {/* adding a default alt is the solution of the error I was having when clicking on the signout button on the profile page */}
                         <Image src={user?.image || userAvatar} alt={user?.name || "User's image"} height={200} width={200} className="rounded-full"></Image>
                         <Card.Header className="flex flex-col items-center gap-2">
-                            <Card.Title className="font-bold text-3xl">{user?.name}</Card.Title>
+                            <Card.Title className="font-bold text-xl">{user?.name}</Card.Title>
                             <Card.Description>{user?.email}</Card.Description>
                         </Card.Header>
                         <Card.Footer className="flex gap-2">

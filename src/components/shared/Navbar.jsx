@@ -39,7 +39,9 @@ const Navbar = () => {
                     {isPending ? <span className="loading loading-ring loading-xl"></span> : user ? <div className="flex items-center gap-2">
                         <h2>{user.name}</h2>
                         <Avatar>
-                            <Avatar.Image alt={user.name} src={user.image} />
+                            <Avatar.Image alt={user.name} src={user.image}
+                            referrerPolicy="no-referrer"
+                            />
                             <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
                         </Avatar>
                         {/* profile btn */}
