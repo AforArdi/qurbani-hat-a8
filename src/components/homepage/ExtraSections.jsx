@@ -1,4 +1,5 @@
 import { getTips } from "@/lib/services";
+import Marquee from "react-fast-marquee";
 
 const ExtraSections = async () => {
   const tips = await getTips();
@@ -29,15 +30,16 @@ const ExtraSections = async () => {
                         footer
                     </Card.Footer>
                 </Card> */}
-        <div className="card w-96 bg-base-100 card-xs shadow-sm">
-          <div className="card-body">
-            <h2 className="card-title">Xsmall Card</h2>
-            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-            <div className="justify-end card-actions">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
+        <Marquee pauseOnHover={true} speed={50} gradient={false}>
+          <div className="flex items-center justify-center gap-4">
+            {tips.map(tip =>
+              <div key={tip.id} className="card bg-base-100 shadow-sm">
+                <div className="card-body flex items-center gap-2">
+                  <h2 className="card-title text-[#154734]">{tip.text}</h2>
+                </div>
+              </div>)}
           </div>
-        </div>
+        </Marquee>
       </div>
     </div>
   );
