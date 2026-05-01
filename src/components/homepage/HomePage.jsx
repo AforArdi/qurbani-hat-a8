@@ -1,6 +1,5 @@
 import { getAnimals } from "@/lib/services";
 import AnimalCard from "../animals/AnimalCard";
-import Marquee from "react-fast-marquee";
 
 const HomePage = async () => {
     const animals = await getAnimals();

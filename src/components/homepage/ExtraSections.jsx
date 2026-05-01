@@ -1,12 +1,8 @@
 import { getTips } from "@/lib/services";
-import { Card } from "@heroui/react";
-import { FaCheck } from "react-icons/fa6";
-
-
 
 const ExtraSections = async () => {
-  // const tips = await getTips();
-  // console.log(tips);
+  const tips = await getTips();
+  console.log(tips);
 
   return (
     <div className="max-w-6xl mx-auto">
