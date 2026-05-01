@@ -1,3 +1,6 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 @plugin "daisyui";
+.font-bengali {
+  font-family: var(--font-bengali);
+}

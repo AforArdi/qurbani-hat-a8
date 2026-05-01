@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { Flip, ToastContainer } from "react-toastify";
@@ -8,6 +8,10 @@ const poppins = Poppins({
   variable: '--font-poppins',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700']
+})
+const bengali = Noto_Serif_Bengali({
+  variable: '--font-bengali',
+  subsets: ['bengali'],
 })
 
 export const metadata = {
