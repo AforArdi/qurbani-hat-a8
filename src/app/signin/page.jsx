@@ -1,6 +1,7 @@
 'use client'
 
 import { authClient } from "@/lib/auth-client";
+import { Separator } from "@heroui/react";
 import Link from "next/link";
 import { useForm } from "react-hook-form"
 import { FaGoogle } from "react-icons/fa6";
@@ -37,11 +38,11 @@ const SignInPage = () => {
         });
     }
     return (
-        <div className="flex flex-col justify-center items-center gap-5 my-10">
-            <h2 className="text-3xl font-bold text-[#154734]">Login Your Account</h2>
+        <div className="flex flex-col justify-center items-center gap-5 bg-base-200 border-base-300 rounded-box">
+            <h2 className="text-3xl font-bold text-[#154734] mt-10">Login Your Account</h2>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                className="fieldset w-xs">
 
                 <label className="label">Email</label>
                 <input type="email"
@@ -56,11 +57,11 @@ const SignInPage = () => {
                 {errors.password && <span>{errors.password.message}</span>}
 
                 <button className="btn bg-[#154734] text-white rounded-3xl mt-4">Sign in</button>
-                <p className="text-[14px]">Don't have any account? <Link href={'/signup'} className="text-[#154734]">Sign up</Link></p>
+                <p className="text-[14px] text-center">Don't have any account? <Link href={'/signup'} className="text-[#154734]">Sign up</Link></p>
             </form>
-            <div className="flex flex-col items-center">
-                <p>or</p>
-                <button onClick={handleGoogleSignInBtn} className="btn border border-blue-500 text-blue-500 rounded-3xl mt-4"><FaGoogle></FaGoogle> Continue with Google</button>
+            <div className="flex flex-col items-center w-xs">
+                <div className="divider">OR</div>
+                <button onClick={handleGoogleSignInBtn} className="btn border border-blue-500 text-blue-500 rounded-3xl mb-10"><FaGoogle></FaGoogle> Continue with Google</button>
             </div>
         </div>
     );
