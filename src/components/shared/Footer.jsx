@@ -1,10 +1,11 @@
 import Image from "next/image";
 import logo from '@/assets/logo.png'
-import Link from "next/link";
 import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { FiYoutube } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
+import animationData from '@/assets/contact-animation.json';
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Footer = () => {
     return (
@@ -14,6 +15,16 @@ const Footer = () => {
                 <p className="text-[16px] font-bold">QurbaniHat</p>
                 <p className="text-[16px]">With ease, trust & transparency</p>
             </aside>
+
+            {/* lotti */}
+            <div className="w-50 h-50 -mb-6">
+                <DotLottieReact
+                    data={animationData}
+                    loop
+                    autoplay
+                />
+            </div>
+
             <div className="flex flex-col gap-10">
                 {/* social */}
                 <div>
@@ -30,6 +41,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
+
                 {/* contact info */}
                 <div>
                     <h6 className="footer-title text-[16px]">Contact Us</h6>
