@@ -13,23 +13,11 @@ const ProfilePage = () => {
     return (
         <div className="flex items-center justify-center my-10">
             {isPending ? <span className="loading loading-ring loading-xl"></span> :
-                // <Card className="w-[80%] mx-auto items-stretch md:flex-row">
-                //     {/* <h2 className="text-3xl font-bold text-[#154734]">Login Your Account</h2> */}
-                //     <Image src={user?.image || userAvatar} alt={user.name} width={200} height={200}
-                //         className="rounded-full"
-                //     ></Image>
-                //     <div className="flex flex-1 flex-col gap-3 space-y-3">
-                //         <Card.Header className="gap-1 space-y-3 mb-auto">
-                //             <Card.Title className="pr-8 font-bold text-3xl text-[#154734]">{user.name}</Card.Title>
-                //         </Card.Header>
-                //         <Card.Footer className="flex w-full flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-                //         </Card.Footer>
-                //     </div>
-                // </Card>
                 <Card className="w-100">
                     <div className="flex flex-col items-center gap-4">
                         <h2 className="text-2xl font-bold text-[#154734]">Your Profile</h2>
-                        <Image src={user?.image} alt={user?.name} height={200} width={200} className="rounded-full"></Image>
+                        {/* adding a default alt is the solution of the error I was having when clicking on the signout button on the profile page */}
+                        <Image src={user?.image || userAvatar} alt={user?.name || "User's image"} height={200} width={200} className="rounded-full"></Image>
                         <Card.Header className="flex flex-col items-center gap-2">
                             <Card.Title className="font-bold text-3xl">{user?.name}</Card.Title>
                             <Card.Description>{user?.email}</Card.Description>
