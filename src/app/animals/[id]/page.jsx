@@ -5,12 +5,16 @@ import { CircleFill } from "@gravity-ui/icons";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosPricetag } from "react-icons/io";
 import { TbCurrencyTaka } from "react-icons/tb";
-import { GiWeight } from "react-icons/gi";
 import BookNowModal from "@/components/animals/BookNowModal";
+import { notFound } from 'next/navigation'
 
 const AnimalDetailsPage = async ({ params }) => {
     const { id } = await params;
     const animal = await getAnimalById(id);
+
+    if(!animal){
+        notFound()
+    }
 
     return (
         <div className="max-w-6xl mx-auto my-10">

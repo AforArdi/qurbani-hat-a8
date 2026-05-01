@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const QuickTips = ({tips}) => {
     return (
-        <div>
+        <div className="my-20">
             <h2 className="text-4xl font-bold text-[#154734] text-center my-5">Qurbani Tips</h2>
             <div className="flex items-center">
                 <Marquee pauseOnHover={true} speed={100} gradient={false}>
