@@ -3,10 +3,15 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form"
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { toast } from "react-toastify";
 
 const SignUpPage = () => {
+    // password visible eye toggle state
+    const [isPassVisible, setIsPassVisible] = useState(false);
+
     const router = useRouter();
     const {
         register,
@@ -35,37 +40,42 @@ const SignUpPage = () => {
         }
     }
     return (
-        <div className="flex flex-col justify-center items-center gap-5 my-10">
-            <h2 className="text-3xl font-bold text-[#154734]">Register Your Account</h2>
+        <div className="flex flex-col justify-center items-center gap-5 bg-base-200 border-base-300 rounded-box">
+            <h2 className="text-3xl font-bold text-[#154734] mt-10">Register Your Account</h2>
             <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                onSubmit={handleSubmit(onSubmit)}
+                className="fieldset w-xs mb-10">
 
                 <label className="label">Name</label>
                 <input type="text"
-                {...register("name", { required: 'Name is required' })}
-                className="input" placeholder="Name" />
+                    {...register("name", { required: 'Name is required' })}
+                    className="input" placeholder="Name" />
                 {errors.name && <span>{errors.name.message}</span>}
 
                 <label className="label">Email</label>
                 <input type="email"
-                {...register("email", { required: 'Email is required' })}
-                className="input" placeholder="Email" />
+                    {...register("email", { required: 'Email is required' })}
+                    className="input" placeholder="Email" />
                 {errors.email && <span>{errors.email.message}</span>}
 
-                <label className="label">Password</label>
-                <input type="password"
-                {...register("password", { required: 'Password is required', minLength: {value: 8, message: 'Minimum Length is 8'} })}
-                className="input" placeholder="Password" />
-                {errors.password && <span>{errors.password.message}</span>}
+                <div className="relative">
+                    <label className="label">Password</label>
+                    <input type={isPassVisible ? "text" : "password"}
+                        {...register("password", { required: 'Password is required', minLength: { value: 8, message: 'Minimum Length is 8' } })}
+                        className="input" placeholder="Password" />
+                    <span className="absolute right-4 bottom-3" onClick={() => setIsPassVisible(!isPassVisible)}>
+                        {isPassVisible ? <FaRegEye size={20}></FaRegEye> : <FaRegEyeSlash size={20}></FaRegEyeSlash>}
+                    </span>
+                    {errors.password && <span>{errors.password.message}</span>}
+                </div>
 
                 <label className="label">Photo URL (optional)</label>
                 <input type="url"
-                {...register("photo")}
-                className="input" placeholder="valid url or leave empty" />
+                    {...register("photo")}
+                    className="input" placeholder="valid url or leave empty" />
 
                 <button className="btn bg-[#154734] text-white rounded-3xl mt-4">Sign up</button>
-                <p className="text-[14px]">Already have an account? <Link href={'/signin'} className="text-[#154734]">Sign in</Link></p>
+                <p className="text-[14px] text-center">Already have an account? <Link href={'/signin'} className="text-[#154734]">Sign in</Link></p>
             </form>
         </div>
     );

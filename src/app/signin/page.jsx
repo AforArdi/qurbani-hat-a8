@@ -3,11 +3,15 @@
 import { authClient } from "@/lib/auth-client";
 import { Separator } from "@heroui/react";
 import Link from "next/link";
+import { useState } from "react";
 import { useForm } from "react-hook-form"
-import { FaGoogle } from "react-icons/fa6";
+import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { toast } from "react-toastify";
 
 const SignInPage = () => {
+    // password visible eye toggle state
+    const [isPassVisible, setIsPassVisible] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -37,6 +41,7 @@ const SignInPage = () => {
             provider: "google",
         });
     }
+
     return (
         <div className="flex flex-col justify-center items-center gap-5 bg-base-200 border-base-300 rounded-box">
             <h2 className="text-3xl font-bold text-[#154734] mt-10">Login Your Account</h2>
@@ -50,11 +55,16 @@ const SignInPage = () => {
                     className="input" placeholder="Email" />
                 {errors.email && <span>{errors.email.message}</span>}
 
-                <label className="label">Password</label>
-                <input type="password"
-                    {...register("password", { required: 'Password is required', minLength: { value: 8, message: 'Minimum Length is 8' } })}
-                    className="input" placeholder="Password" />
-                {errors.password && <span>{errors.password.message}</span>}
+                <div className="relative">
+                    <label className="label">Password</label>
+                    <input type={isPassVisible ? "text" : "password"}
+                        {...register("password", { required: 'Password is required', minLength: { value: 8, message: 'Minimum Length is 8' } })}
+                        className="input" placeholder="Password" />
+                    <span className="absolute right-4 bottom-3" onClick={() => setIsPassVisible(!isPassVisible)}>
+                        {isPassVisible ? <FaRegEye size={20}></FaRegEye> : <FaRegEyeSlash size={20}></FaRegEyeSlash>}
+                    </span>
+                    {errors.password && <span>{errors.password.message}</span>}
+                </div>
 
                 <button className="btn bg-[#154734] text-white rounded-3xl mt-4">Sign in</button>
                 <p className="text-[14px] text-center">Don't have any account? <Link href={'/signup'} className="text-[#154734]">Sign up</Link></p>

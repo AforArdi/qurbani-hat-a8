@@ -12,6 +12,8 @@ export const getAnimalById = async (id) => {
     return singleAnimal;
 }
 
+
+
 export const getTips = async () => {
     // externam db hosted on render
     const res = await fetch('https://qurbani-hat-a8-server.onrender.com/tips');
