@@ -1,5 +1,4 @@
-{
-  "dos": [
+[
     {
       "id": 1,
       "text": "Choose healthy and active animals"
@@ -39,9 +38,7 @@
     {
       "id": 10,
       "text": "Follow proper Qurbani guidelines and intention"
-    }
-  ],
-  "donts": [
+    },
     {
       "id": 11,
       "text": "Do not buy sick or weak animals"
@@ -82,5 +79,4 @@
       "id": 20,
       "text": "Avoid rushing the Qurbani process without preparation"
     }
-  ]
-}
+]
