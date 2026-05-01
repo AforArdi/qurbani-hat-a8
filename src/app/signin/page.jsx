@@ -70,7 +70,7 @@ const SignInPage = () => {
                 <p className="text-[14px] text-center">Don't have any account? <Link href={'/signup'} className="text-[#154734]">Sign up</Link></p>
             </form>
             <div className="flex flex-col items-center w-xs">
-                <div className="divider">OR</div>
+                <div className="divider mt-0">OR</div>
                 <button onClick={handleGoogleSignInBtn} className="btn border border-blue-500 text-blue-500 rounded-3xl mb-10"><FaGoogle></FaGoogle> Continue with Google</button>
             </div>
         </div>
