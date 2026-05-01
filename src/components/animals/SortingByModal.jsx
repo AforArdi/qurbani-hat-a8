@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import AnimalCard from "./AnimalCard";
+import { Button, Dropdown, Label } from "@heroui/react";
 
-const SortingByModal = ({ animals }) => {
+const SortingOnClientPage = ({ animals }) => {
     const [sortingType, setSortingType] = useState('all');
     const [sortedData, setSortedData] = useState(animals);
 
@@ -27,7 +28,7 @@ const SortingByModal = ({ animals }) => {
             {/* sorting modal */}
             <div className="ml-10 mb-3">
                 <details className="dropdown">
-                    <summary className="btn m-1">Sort By</summary>
+                    <summary className="btn rounded-3xl m-1">Sort By</summary>
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li onClick={() => setSortingType('all')}><a>All</a></li>
                         <li onClick={() => setSortingType('low')}><a>Price Low to High</a></li>
@@ -47,4 +48,4 @@ const SortingByModal = ({ animals }) => {
     );
 }
 
-export default SortingByModal;
+export default SortingOnClientPage;
