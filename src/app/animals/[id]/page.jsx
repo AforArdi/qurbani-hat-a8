@@ -8,6 +8,16 @@ import { TbCurrencyTaka } from "react-icons/tb";
 import BookNowModal from "@/components/animals/BookNowModal";
 import { notFound } from 'next/navigation'
 
+export const generateMetadata = async ({params}) => {
+    const { id } = await params;
+    console.log(id, 'id')
+    const animal = await getAnimalById(id);
+    return {
+    title: animal?.name,
+    description: animal?.description,
+  }
+};
+
 const AnimalDetailsPage = async ({ params }) => {
     const { id } = await params;
     const animal = await getAnimalById(id);
