@@ -14,7 +14,7 @@ const AnimalCard = ({ animal }) => {
 
     return (
         <div>
-            <Card className="w-96 gap-2 mx-auto">
+            <Card className="w-full max-w-sm gap-2 mx-auto">
                 <div className="relative">
                     <Image src={animal?.image || defaultPic} alt={animal?.name} width={300} height={300}
                         className="w-full rounded-lg"

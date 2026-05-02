@@ -68,7 +68,7 @@ const Navbar = () => {
                             onClick={handleSignoutBtn}
                             className="btn bg-red-500 text-white rounded-3xl">Sign out</button>
                     </div> :
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-col sm:flex-row sm:gap-2 items-center gap-1">
                         <Link href={'/signin'}>
                             <button className="btn bg-[#154734] text-white rounded-3xl">Sign in</button>
                         </Link>
