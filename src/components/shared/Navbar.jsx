@@ -49,34 +49,36 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {isPending ? <span className="loading loading-ring loading-xl"></span> : user ? 
-                    <div className="flex items-center gap-2">
-                        <h2>{user.name}</h2>
-                        <Avatar>
-                            <Avatar.Image alt={user.name} src={user.image}
-                                referrerPolicy="no-referrer"
-                            />
-                            <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
-                        </Avatar>
-                        {/* profile btn */}
-                        <Link href={'/profile'}>
+                    {isPending ? <span className="loading loading-ring loading-xl"></span> : user ?
+                        <div className="flex flex-col sm:flex-row sm:gap-2 items-right gap-1">
+                            <div className="flex items-center gap-1">
+                                <h2>{user.name}</h2>
+                                <Avatar>
+                                    <Avatar.Image alt={user.name} src={user.image}
+                                        referrerPolicy="no-referrer"
+                                    />
+                                    <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+                                </Avatar>
+                                {/* profile btn */}
+                                <Link href={'/profile'}>
+                                    <button
+                                        className="btn btn-neutral text-white rounded-3xl">Profile</button>
+                                </Link>
+                            </div>
+                            {/* signout btn */}
                             <button
-                                className="btn btn-neutral text-white rounded-3xl">Profile</button>
-                        </Link>
-                        {/* signout btn */}
-                        <button
-                            onClick={handleSignoutBtn}
-                            className="btn bg-red-500 text-white rounded-3xl">Sign out</button>
-                    </div> :
-                    <div className="flex flex-col sm:flex-row sm:gap-2 items-center gap-1">
-                        <Link href={'/signin'}>
-                            <button className="btn bg-[#154734] text-white rounded-3xl">Sign in</button>
-                        </Link>
-                        <Separator className="hidden sm:block" orientation="vertical" variant="tertiary"></Separator>
-                        <Link href={'/signup'}>
-                            <button className="btn bg-[#154734] text-white rounded-3xl">Sign up</button>
-                        </Link>
-                    </div>}
+                                onClick={handleSignoutBtn}
+                                className="btn bg-red-500 text-white rounded-3xl">Sign out</button>
+                        </div> :
+                        <div className="flex flex-col sm:flex-row sm:gap-2 items-center gap-1">
+                            <Link href={'/signin'}>
+                                <button className="btn bg-[#154734] text-white rounded-3xl">Sign in</button>
+                            </Link>
+                            <Separator className="hidden sm:block" orientation="vertical" variant="tertiary"></Separator>
+                            <Link href={'/signup'}>
+                                <button className="btn bg-[#154734] text-white rounded-3xl">Sign up</button>
+                            </Link>
+                        </div>}
                 </div>
             </div>
         </div>
