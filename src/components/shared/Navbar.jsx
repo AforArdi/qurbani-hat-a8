@@ -72,7 +72,7 @@ const Navbar = () => {
                         <Link href={'/signin'}>
                             <button className="btn bg-[#154734] text-white rounded-3xl">Sign in</button>
                         </Link>
-                        <Separator orientation="vertical" variant="tertiary"></Separator>
+                        <Separator className="hidden sm:block" orientation="vertical" variant="tertiary"></Separator>
                         <Link href={'/signup'}>
                             <button className="btn bg-[#154734] text-white rounded-3xl">Sign up</button>
                         </Link>

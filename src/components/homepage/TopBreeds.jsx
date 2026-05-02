@@ -4,10 +4,10 @@ const TopBreeds = ({breeds}) => {
     return (
         <div>
             <h2 className="text-4xl font-bold text-[#154734] text-center my-5">Top Breeds</h2>
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 place-items-center p-2">
                 {
                     breeds.map(breed =>
-                        <div key={breed.id} className="card p-0 hover:scale-105 cursor-pointer bg-base-100 image-full shadow-sm">
+                        <div key={breed.id} className="card w-96 p-0 hover:scale-90 cursor-pointer bg-base-100 image-full shadow-sm">
                             <figure>
                                 <Image src={breed.image} alt={breed.name} height={200} width={200}
                                     className="w-full"

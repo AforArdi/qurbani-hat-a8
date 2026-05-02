@@ -14,10 +14,10 @@ const AnimalCard = ({ animal }) => {
 
     return (
         <div>
-            <Card>
+            <Card className="w-96 gap-2 mx-auto">
                 <div className="relative">
                     <Image src={animal?.image || defaultPic} alt={animal?.name} width={300} height={300}
-                        className="rounded-lg mx-auto"
+                        className="w-full rounded-lg"
                     ></Image>
                     <Chip className="absolute top-2 right-6">
                         <CircleFill width={6} />

@@ -9,7 +9,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal bg-[#154734] text-neutral-content p-10 mt-10 flex justify-around">
+        <footer className="footer sm:footer-horizontal bg-[#154734] text-neutral-content p-10 mt-10 flex flex-col lg:flex-row items-center lg:items-start justify-around gap-10 lg:gap-0">
             <aside className="flex flex-col items-center">
                 <Image src={logo} alt="Company Logo" width={100} height={100}></Image>
                 <p className="text-[16px] font-bold">QurbaniHat</p>
@@ -17,7 +17,7 @@ const Footer = () => {
             </aside>
 
             {/* lotti */}
-            <div className="w-50 h-50 -mb-6">
+            <div className="w-48 h-48 lg:w-64 lg:h-64 self-center">
                 <DotLottieReact
                     data={animationData}
                     loop
@@ -25,6 +25,7 @@ const Footer = () => {
                 />
             </div>
 
+            {/* info div */}
             <div className="flex flex-col gap-10">
                 {/* social */}
                 <div>
