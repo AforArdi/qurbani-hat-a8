@@ -1,5 +1,7 @@
 # Qurbani Hat
 
+<img width="960" height="449" alt="qurbani-hat-ss" src="https://github.com/user-attachments/assets/54fe7fd6-b196-49aa-9f19-441c03b1da62" />
+
 An online platform for booking qurbani animals with an intuitive interface for browsing, comparing, and booking animals for Eid celebrations.
 
 **Live:** [https://qurbani-hat-a8.vercel.app/](https://qurbani-hat-a8.vercel.app/)
